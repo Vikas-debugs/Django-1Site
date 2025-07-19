@@ -1,0 +1,22 @@
+{% extends 'myapp/base.html' %}
+
+{% load static %}
+
+{% block content %}
+<div class="container">
+    {% for n in ap %}
+    <div class="card" style="width: 18rem;">
+  <img src="{{n.image.url}}" class="card-img-top" alt="...">
+        <div class="card-body">
+    <h5 class="card-title">{{n.title}}</h5>
+    <p class="card-text">{{n.content|truncatechars:100}}</p>
+      <p class="card-text">{{n.created_at}}</p>
+      <p class="card-text">{{n.updated_at}}</p>
+
+    <a href="#" class="btn btn-primary">ReadMore</a>
+  </div>
+</div>
+    {% endfor %}
+
+</div>
+    {% endblock %}
