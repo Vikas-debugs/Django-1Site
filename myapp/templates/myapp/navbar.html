@@ -53,10 +53,10 @@
             <a class="nav-link" href="{% url 'about' %}">About</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="{% url 'services' %}">Services</a>
+            <a class="nav-link" href="">Services</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="{% url 'languages' %}">Languages</a>
+            <a class="nav-link" href="#languages">Languages</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#blog">Blog</a>
@@ -64,12 +64,22 @@
           <li class="nav-item">
             <a class="nav-link" href="{% url 'contact' %}">Contact</a>
           </li>
+          {% if user.is_authenticated %}
+           <li class="nav-item">
+            <a class="nav-link" href="{% url 'dashboard' %}">Dashboard</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'logoutpage' %}">Logout</a>
+          </li>
+          {% else %}
            <li class="nav-item">
             <a class="nav-link" href="{% url 'signuppage' %}">Register</a>
           </li>
+
            <li class="nav-item">
             <a class="nav-link" href="{% url 'loginpage' %}">Login</a>
           </li>
+          {% endif %}
         </ul>
 
       </div>
@@ -80,3 +90,4 @@
     " + "<div class='navbar-sample'>Sample Navigation Element</div>\n".repeat(980) + "
   </div>
 </header>
+

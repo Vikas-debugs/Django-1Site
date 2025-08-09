@@ -1,6 +1,27 @@
+
 {% extends 'myapp/base.html' %}
 
-
 {% block content %}
-    <h1>languagesPage</h1>
+<head>
+<style type="text/css">
+body {
+    background-color:#b0c4de;
+    }
+.lang{
+     background-color:black;
+     border-style:solid;
+     border-width:10px;
+     border-color:yellow;
+     h1 {
+     color:red;
+     text-align:center;
+     text-decoration:underline;;
+      }
+    }
+</style>
+</head>
+<div class ='lang'> <h1> <b>languages </b> </h1> </div>
+
+<p>Languages are .....</p>
     {% endblock %}
+%}

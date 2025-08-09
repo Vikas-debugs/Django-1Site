@@ -1,4 +1,25 @@
 {% extends 'myapp/base.html' %}
+
 {% block content %}
-    <h1>About Page</h1>
+<head>
+<style type="text/css">
+body {
+    background-color:#b0c4de;
+    }
+.about{
+     background-color:black;
+     border-style:solid;
+     border-width:10px;
+     border-color:yellow;
+     h1 {
+     color:red;
+     text-align:center;
+     text-decoration:underline;;
+      }
+    }
+</style>
+</head>
+<div class ='about'> <h1> <b> About Me </b> </h1> </div>
+
+<p>Hi My Name is Vikas Yadav </p>
     {% endblock %}
